@@ -7,25 +7,42 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
     "></script>
     <script>
-        $(document).ready(function(){
-            $(".click").click(function(){
-                $("div").show();
-            });
-            $("div").click(function(){
-            $("#container").css('background-color','green');
-        })
-        
-        });
-       
+     
+        $(document).ready(function () {
+  let button = $("<button >Click Me</button>")
+    .text("Click Me").attr("id", "click").attr("type", "button");
 
+  $(document).find("#container").append(button);
+  $("#click").click(function() {
+    $("#container").addClass("bgcolor");
+  });
+});
     </script>
     <style>
-        
+ #container {
+  width: 500px;
+  height: 500px;
+}
+
+.bgcolor {
+  background-color: green;
+}
+
+button
+ {
+  background-color: rgb(184, 19, 19);
+  color: white;
+  font: bolder;
+  font-size:xx-large;
+  border-radius: 5px;
+
+
+}
+
     </style>
 </head>
 <body style="text-align: center;justify-content: center;align-items: center;display: flex;">
-    <div id="container"style=" width: 500px; height:500px;"> 
-        <button class="click" style="font-size: x-large;border-radius: 5px;border-style: groove;font-weight: bolder; width: 200px; height: 50px;"> Click me</button>
+    <div id="container"> 
 </div>
     
 </body>
